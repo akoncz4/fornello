@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="hu" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fornello On Tour - Kemencés Kitelepülés</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    colors: {
+                        brand: {
+                            dark: '#1a1a1a',
+                            light: '#fdfbf7',
+                            primary: '#d64022', // Appealing warm red/orange for pizza
+                            secondary: '#2c3e50'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #fdfbf7;
+            color: #1a1a1a;
+        }
+        .hero-bg {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=2070&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        .gallery-img {
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+        .gallery-item:hover .gallery-img {
+            transform: scale(1.05);
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body class="antialiased font-sans flex flex-col min-h-screen">
+
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-24">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="#" class="flex items-center">
+                        <img class="h-20 w-auto object-contain" src="logo.jpeg" alt="Fornello On Tour Logo">
+                    </a>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#rolunk" class="text-gray-700 hover:text-brand-primary px-3 py-2 text-sm font-semibold uppercase tracking-wider transition-colors">Rólunk</a>
+                    <a href="#referenciak" class="text-gray-700 hover:text-brand-primary px-3 py-2 text-sm font-semibold uppercase tracking-wider transition-colors">Referenciák</a>
+                    <a href="#kapcsolat" class="text-gray-700 hover:text-brand-primary px-3 py-2 text-sm font-semibold uppercase tracking-wider transition-colors">Kapcsolat</a>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-700 hover:text-brand-primary focus:outline-none p-2">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 absolute w-full shadow-lg">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#rolunk" class="block px-3 py-2 text-base font-semibold text-gray-800 hover:text-brand-primary hover:bg-gray-50 uppercase text-center">Rólunk</a>
+                <a href="#referenciak" class="block px-3 py-2 text-base font-semibold text-gray-800 hover:text-brand-primary hover:bg-gray-50 uppercase text-center">Referenciák</a>
+                <a href="#kapcsolat" class="block px-3 py-2 text-base font-semibold text-gray-800 hover:text-brand-primary hover:bg-gray-50 uppercase text-center">Kapcsolat</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero-bg relative text-white py-32 lg:py-48 flex items-center justify-center text-center px-4">
+        <div class="max-w-3xl mx-auto z-10">
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-serif font-bold mb-6 leading-tight">
+                Autentikus Nápolyi Pizza<br>az Ön Rendezvényén
+            </h1>
+            <p class="text-lg md:text-xl font-light mb-10 text-gray-200">
+                Prémium minőség, igazi kemencés hangulat Mátészalkán és környékén.
+            </p>
+            <a href="#kapcsolat" class="inline-block bg-brand-primary hover:bg-red-700 text-white font-bold py-4 px-10 rounded-full transition-all duration-300 transform hover:-translate-y-1 shadow-lg text-lg">
+                Ajánlatkérés
+            </a>
+        </div>
+    </section>
+
+    <section id="rolunk" class="py-20 bg-brand-light">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="mb-4 text-brand-primary text-4xl">
+                <i class="fa-solid fa-fire-flame-curved"></i>
+            </div>
+            <h2 class="text-3xl md:text-4xl font-serif font-bold mb-8 text-brand-dark">Kik vagyunk?</h2>
+            <div class="w-24 h-1 bg-brand-primary mx-auto mb-8"></div>
+            <p class="text-xl md:text-2xl font-light text-gray-700 leading-relaxed">
+                "Kemencés kitelepülés rendezvényekre stb. <br class="hidden md:block"> Nápolyi jellegű pizzákat készítünk Mátészalkán és környékén."
+            </p>
+        </div>
+    </section>
+
+    <section id="referenciak" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-serif font-bold mb-4 text-brand-dark">Referenciáink</h2>
+                <div class="w-24 h-1 bg-brand-primary mx-auto"></div>
+                <p class="mt-6 text-gray-600">Nézze meg hogyan varázsoljuk különlegessé a rendezvényeket!</p>
+            </div>
+
+            <!-- Gallery Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+                <!-- Placeholder Image 1 -->
+                <div class="gallery-item relative overflow-hidden rounded-lg aspect-square bg-gray-200 cursor-pointer shadow-sm">
+                    <img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&w=800&q=80" alt="Pizza készítés" class="gallery-img object-cover w-full h-full">
+                </div>
+                <!-- Placeholder Image 2 -->
+                <div class="gallery-item relative overflow-hidden rounded-lg aspect-square bg-gray-200 cursor-pointer shadow-sm">
+                    <img src="https://images.unsplash.com/photo-1590947132387-155cc02f3212?auto=format&fit=crop&w=800&q=80" alt="Kemencés sütés" class="gallery-img object-cover w-full h-full">
+                </div>
+                <!-- Placeholder Image 3 -->
+                <div class="gallery-item relative overflow-hidden rounded-lg aspect-square bg-gray-200 cursor-pointer shadow-sm">
+                    <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=800&q=80" alt="Nápolyi pizza" class="gallery-img object-cover w-full h-full">
+                </div>
+                <!-- Placeholder Image 4 -->
+                <div class="gallery-item relative overflow-hidden rounded-lg aspect-square bg-gray-200 cursor-pointer shadow-sm">
+                    <img src="https://images.unsplash.com/photo-1604382354936-07c5d9983bd3?auto=format&fit=crop&w=800&q=80" alt="Rendezvény kitelepülés" class="gallery-img object-cover w-full h-full">
+                </div>
+                <!-- Placeholder Image 5 -->
+                <div class="gallery-item relative overflow-hidden rounded-lg aspect-square bg-gray-200 cursor-pointer shadow-sm">
+                    <img src="https://images.unsplash.com/photo-1579751626657-72bc17010498?auto=format&fit=crop&w=800&q=80" alt="Rendezvény hangulat" class="gallery-img object-cover w-full h-full">
+                </div>
+                <!-- Placeholder Image 6 -->
+                <div class="gallery-item relative overflow-hidden rounded-lg aspect-square bg-gray-200 cursor-pointer shadow-sm">
+                    <img src="https://images.unsplash.com/photo-1613564834361-9436948817d1?auto=format&fit=crop&w=800&q=80" alt="Ínycsiklandó pizza" class="gallery-img object-cover w-full h-full">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="kapcsolat" class="py-20 bg-brand-dark text-white">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-4xl font-serif font-bold mb-12">Lépjen velünk kapcsolatba!</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <!-- Phone -->
+                <a href="tel:+36302440847" class="group flex flex-col items-center p-6 bg-zinc-800 rounded-2xl hover:bg-zinc-700 transition-colors">
+                    <div class="w-16 h-16 bg-brand-primary rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-phone text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg text-gray-400 mb-2 uppercase tracking-wide text-sm font-semibold">Telefon</h3>
+                    <p class="text-xl font-medium">+36 30 244 0847</p>
+                </a>
+
+                <!-- Instagram -->
+                <a href="https://instagram.com/fornelloontour" target="_blank" rel="noopener noreferrer" class="group flex flex-col items-center p-6 bg-zinc-800 rounded-2xl hover:bg-zinc-700 transition-colors">
+                    <div class="w-16 h-16 bg-brand-primary rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-brands fa-instagram text-3xl"></i>
+                    </div>
+                    <h3 class="text-lg text-gray-400 mb-2 uppercase tracking-wide text-sm font-semibold">Instagram</h3>
+                    <p class="text-xl font-medium">@fornelloontour</p>
+                </a>
+
+                <!-- Email -->
+                <a href="mailto:fornelloontour@gmail.com" class="group flex flex-col items-center p-6 bg-zinc-800 rounded-2xl hover:bg-zinc-700 transition-colors">
+                    <div class="w-16 h-16 bg-brand-primary rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-regular fa-envelope text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg text-gray-400 mb-2 uppercase tracking-wide text-sm font-semibold">E-mail</h3>
+                    <p class="text-lg font-medium break-all">fornelloontour@gmail.com</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-black py-6 text-center text-gray-500 text-sm">
+        <p>&copy; <span id="year"></span> Fornello On Tour. Minden jog fenntartva.</p>
+    </footer>
+
+    <script>
+        // Set current year in footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Mobile menu toggle
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        const menuLinks = menu.querySelectorAll('a');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when a link is clicked
+        menuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
