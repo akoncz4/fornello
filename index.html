@@ -19,7 +19,7 @@
                         brand: {
                             dark: '#1a1a1a',
                             light: '#fdfbf7',
-                            primary: '#d64022', // Appealing warm red/orange for pizza
+                            primary: '#d64022', 
                             secondary: '#2c3e50'
                         }
                     }
@@ -52,21 +52,18 @@
     <header class="bg-white shadow-sm sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-24">
-                <!-- Logo -->
                 <div class="flex-shrink-0 flex items-center">
                     <a href="#" class="flex items-center">
                         <img class="h-20 w-auto object-contain" src="logo.jpeg" alt="Fornello On Tour Logo">
                     </a>
                 </div>
                 
-                <!-- Desktop Menu -->
                 <nav class="hidden md:flex space-x-8">
                     <a href="#rolunk" class="text-gray-700 hover:text-brand-primary px-3 py-2 text-sm font-semibold uppercase tracking-wider transition-colors">Rólunk</a>
                     <a href="#referenciak" class="text-gray-700 hover:text-brand-primary px-3 py-2 text-sm font-semibold uppercase tracking-wider transition-colors">Referenciák</a>
                     <a href="#kapcsolat" class="text-gray-700 hover:text-brand-primary px-3 py-2 text-sm font-semibold uppercase tracking-wider transition-colors">Kapcsolat</a>
                 </nav>
 
-                <!-- Mobile Menu Button -->
                 <div class="md:hidden flex items-center">
                     <button id="mobile-menu-btn" class="text-gray-700 hover:text-brand-primary focus:outline-none p-2">
                         <i class="fas fa-bars text-2xl"></i>
@@ -75,7 +72,6 @@
             </div>
         </div>
 
-        <!-- Mobile Menu (Hidden by default) -->
         <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 absolute w-full shadow-lg">
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                 <a href="#rolunk" class="block px-3 py-2 text-base font-semibold text-gray-800 hover:text-brand-primary hover:bg-gray-50 uppercase text-center">Rólunk</a>
@@ -120,29 +116,22 @@
                 <p class="mt-6 text-gray-600">Nézze meg hogyan varázsoljuk különlegessé a rendezvényeket!</p>
             </div>
 
-            <!-- Gallery Grid -->
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
-                <!-- Placeholder Image 1 -->
                 <div class="gallery-item relative overflow-hidden rounded-lg aspect-square bg-gray-200 cursor-pointer shadow-sm">
                     <img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&w=800&q=80" alt="Pizza készítés" class="gallery-img object-cover w-full h-full">
                 </div>
-                <!-- Placeholder Image 2 -->
                 <div class="gallery-item relative overflow-hidden rounded-lg aspect-square bg-gray-200 cursor-pointer shadow-sm">
                     <img src="https://images.unsplash.com/photo-1590947132387-155cc02f3212?auto=format&fit=crop&w=800&q=80" alt="Kemencés sütés" class="gallery-img object-cover w-full h-full">
                 </div>
-                <!-- Placeholder Image 3 -->
                 <div class="gallery-item relative overflow-hidden rounded-lg aspect-square bg-gray-200 cursor-pointer shadow-sm">
                     <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=800&q=80" alt="Nápolyi pizza" class="gallery-img object-cover w-full h-full">
                 </div>
-                <!-- Placeholder Image 4 -->
                 <div class="gallery-item relative overflow-hidden rounded-lg aspect-square bg-gray-200 cursor-pointer shadow-sm">
                     <img src="https://images.unsplash.com/photo-1604382354936-07c5d9983bd3?auto=format&fit=crop&w=800&q=80" alt="Rendezvény kitelepülés" class="gallery-img object-cover w-full h-full">
                 </div>
-                <!-- Placeholder Image 5 -->
                 <div class="gallery-item relative overflow-hidden rounded-lg aspect-square bg-gray-200 cursor-pointer shadow-sm">
                     <img src="https://images.unsplash.com/photo-1579751626657-72bc17010498?auto=format&fit=crop&w=800&q=80" alt="Rendezvény hangulat" class="gallery-img object-cover w-full h-full">
                 </div>
-                <!-- Placeholder Image 6 -->
                 <div class="gallery-item relative overflow-hidden rounded-lg aspect-square bg-gray-200 cursor-pointer shadow-sm">
                     <img src="https://images.unsplash.com/photo-1613564834361-9436948817d1?auto=format&fit=crop&w=800&q=80" alt="Ínycsiklandó pizza" class="gallery-img object-cover w-full h-full">
                 </div>
@@ -155,7 +144,6 @@
             <h2 class="text-3xl md:text-4xl font-serif font-bold mb-12">Lépjen velünk kapcsolatba!</h2>
             
             <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
-                <!-- Phone -->
                 <a href="tel:+36302440847" class="group flex flex-col items-center p-6 bg-zinc-800 rounded-2xl hover:bg-zinc-700 transition-colors">
                     <div class="w-16 h-16 bg-brand-primary rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                         <i class="fa-solid fa-phone text-2xl"></i>
@@ -164,7 +152,6 @@
                     <p class="text-xl font-medium">+36 30 244 0847</p>
                 </a>
 
-                <!-- Instagram -->
                 <a href="https://instagram.com/fornelloontour" target="_blank" rel="noopener noreferrer" class="group flex flex-col items-center p-6 bg-zinc-800 rounded-2xl hover:bg-zinc-700 transition-colors">
                     <div class="w-16 h-16 bg-brand-primary rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                         <i class="fa-brands fa-instagram text-3xl"></i>
@@ -173,7 +160,6 @@
                     <p class="text-xl font-medium">@fornelloontour</p>
                 </a>
 
-                <!-- Email -->
                 <a href="mailto:fornelloontour@gmail.com" class="group flex flex-col items-center p-6 bg-zinc-800 rounded-2xl hover:bg-zinc-700 transition-colors">
                     <div class="w-16 h-16 bg-brand-primary rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                         <i class="fa-regular fa-envelope text-2xl"></i>
@@ -186,14 +172,12 @@
     </section>
 
     <footer class="bg-black py-6 text-center text-gray-500 text-sm">
-        <p>&copy; <span id="year"></span> Fornello On Tour. Minden jog fenntartva.</p>
+        <p>&copy; <span id="year"></span> Koncz Ákos. Minden jog fenntartva.</p>
     </footer>
 
     <script>
-        // Set current year in footer
         document.getElementById('year').textContent = new Date().getFullYear();
 
-        // Mobile menu toggle
         const btn = document.getElementById('mobile-menu-btn');
         const menu = document.getElementById('mobile-menu');
         const menuLinks = menu.querySelectorAll('a');
@@ -202,7 +186,6 @@
             menu.classList.toggle('hidden');
         });
 
-        // Close mobile menu when a link is clicked
         menuLinks.forEach(link => {
             link.addEventListener('click', () => {
                 menu.classList.add('hidden');
